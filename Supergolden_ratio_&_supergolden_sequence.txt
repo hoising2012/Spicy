@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$x=1.46557;
+$i=0;
+while($i<=99){
+	$x=1+1/pow($x,2);
+	$i++;
+}
+echo "The supergolden ratio: ".$x;
+echo "<br \>";
+$Arr=array(1,1,1);
+for($i=3; $i<=18; $i++){
+	$X=$Arr[$i-1]+$Arr[$i-3];
+    array_push($Arr,$X);
+}
+echo "The supergolden sequence: ";
+echo "<br \>";
+foreach($Arr as $val){
+	echo $val." ";
+}
+?>
+</body>
+</html>
