@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$A=7;
+echo $A;
+echo "<br >";
+for($i=0; $i<=5; $i++){
+	$A=$A-1;
+   	$n=7-$A;
+    echo $A;
+    echo  " ";
+    for($j=1; $j<=$n; $j++){
+    	echo "1";
+        echo  " ";
+    }
+    echo "<br >";  
+}
+?>
+</body>
+</html>
