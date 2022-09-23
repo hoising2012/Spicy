@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$A=tricky_ps(124,5);
+$B=tricky_ps(3211,4);
+echo "The result of A is: ".$A;
+echo "<br \>";
+echo "The result of B is: ".$B;
+function tricky_ps($m, $n){
+    $str=(string)$m;
+	$length=strlen($m)-1;
+    $Sum="";
+    for($i=0; $i<=$length; $i++){
+		$j=$length-$i;
+        $x=pow($n,$i);
+        $y=$str[$j];
+   		$Sum=$Sum+($x*$y);
+	}
+    return $Sum;
+}
+?>
+</body>
+</html>
