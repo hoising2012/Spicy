@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$F=cos(1)-sin(0);
+echo "The result of the equation is : ".round($F,4);
+?>
+</body>
+</html>
