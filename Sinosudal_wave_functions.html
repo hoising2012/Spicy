@@ -13,6 +13,9 @@ generateData_1("Math.cos(x)", -6, 6, 0.5);
 var xValues_2 = [];
 var yValues_2 = [];
 generateData_2("Math.cos(x)*Math.sin(x)", -6, 6, 0.5);
+var xValues_3 = [];
+var yValues_3 = [];
+generateData_3("Math.cos(x)+Math.sin(x)", -6, 6, 0.5);
 new Chart("myChart", {
   type: "line",
   data: {
@@ -32,6 +35,11 @@ new Chart("myChart", {
       pointRadius: 2,
       borderColor: "rgba(255,0,0,0.5)",
       data: yValues_2 
+      },{
+	    fill: false,
+      pointRadius: 2,
+      borderColor: "rgba(200,200,0,0.5)",
+      data: yValues_3
     }]
   },    
   options: {
@@ -59,6 +67,12 @@ function generateData_2(value, i1, i2, step = 1) {
   for (let x = i1; x <= i2; x += step) {
     yValues_2.push(eval(value));
     xValues_2.push(x);
+  }
+}
+function generateData_3(value, i1, i2, step = 1) {
+  for (let x = i1; x <= i2; x += step) {
+    yValues_3.push(eval(value));
+    xValues_3.push(x);
   }
 }
 </script>
