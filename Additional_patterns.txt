@@ -30,7 +30,7 @@ echo "<tr>";
 echo "<td>".cos(deg2rad($x))."</td>";
 echo "<td>".sin(deg2rad($y))."</td>";
 echo "<td>".round($F,4)."</td>";
-echo "<tr>";
+echo "</tr>";
 }
 echo "</table>";
 ?>
