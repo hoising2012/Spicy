@@ -3,9 +3,9 @@
 <body>
 <?php
 $Sum="";
-for($i=1; $i<=99; $i++){
-    $pos=pow(-1,$i-1);
-    if($i==1){
+for($i=0; $i<=99; $i++){
+    $pos=pow(-1,$i);
+    if($i==0){
     	$A=1;
     }else{
     	$A=$A/2;
