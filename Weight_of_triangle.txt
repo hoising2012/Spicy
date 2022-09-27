@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {text-align: center;}
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+</style>
+</head>
+<body>
+<?php
+$A=2;
+$Sum=1;
+echo "<div style=\"text-align:center\">";
+$first_inherit=1;
+echo "<span class=\"dot\" style=\"background-color:red\">$first_inherit</span>";
+echo "</div>";
+echo "<br \>";
+for($i=1; $i<=4; $i++){
+    echo "<div style=\"text-align:center\">";
+    for($j=1; $j<=2*$i+1; $j++){
+    $ps=gmp_perfect_square($A);
+    	if($ps==1){
+    	echo "<span class=\"dot\" style=\"background-color:red\">$A</span>";
+    	}else{
+    	echo "<span class=\"dot\">$A</span>";	
+    	}
+        $Sum+=$A;
+        $A+=1; 
+	}
+    echo "</div>";
+    echo "<br \>";
+    if($i==4){
+    	echo "<p>The weight of the triangle: ".$Sum."g<p>";
+    }
+}
+?>
+</body>
+</html>
