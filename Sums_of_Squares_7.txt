@@ -3,14 +3,14 @@
 <body>
 <?php
 $m=10;
-$p=Divisors($m);
+$a=Divisors($m);
 $Sum="";
 $count=0;
-foreach ($p as $value) {
-  	$q=$m/$value;
-  	$r=$value-1;
-  	$s=$q-1;
-  	$F=(1+$r)*(1+$s);
+foreach ($a as $value) {
+  	$b=$m/$value;
+  	$c=$value-1;
+  	$d=$b-1;
+  	$F=(1+$c)*(1+$d);
     $Sum+=$F;
     $count++;
 }
