@@ -14,7 +14,7 @@ th, td {
 </head>
 <body>
 <?php
-$m=10;
+$m=128;
 $a=Divisors($m);
 $Sum="";
 $count=0;
