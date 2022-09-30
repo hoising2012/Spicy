@@ -37,6 +37,8 @@ foreach ($a as $value) {
 }
 echo "</table>";
 echo "The average value is: ".$Sum/$count;
+echo "<br \>";
+echo "The power index of the final Sum with base two: ".log($Sum)/log(2);
 function Divisors($n) {
   $cart=array();
   for($i = 1; $i <= $n; $i++) {
