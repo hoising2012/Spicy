@@ -20,8 +20,8 @@ $Sum="";
 $count=0;
 echo "<table>";
 echo "<tr>";
-echo "<th>Multiplicand</th>";
-echo "<th>Product</th>";
+echo "<th>Multiplicands</th>";
+echo "<th>Products</th>";
 echo "</tr>";
 foreach ($a as $value) {
   	$b=$m/$value;
