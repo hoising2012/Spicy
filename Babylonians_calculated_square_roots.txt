@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$root=square_root(1000,2);
+$root_1=square_root(2,5);
+echo "The square root two is equal to: ".$root;
+echo "<br \>";
+echo "The square root five is equal to: ".$root_1;
+function square_root($X_0,$S){
+	$A=Divisors($X_0);
+	$X_n="";
+	for ($i=0; $i<=count($A); $i++){
+		$X_n=(1/2)*($X_0+($S/$X_0));
+		$X_0=$X_n;
+	}
+    $X_n=round($X_n,5);
+	return $X_n;
+}
+function Divisors($n) {
+  $cart=array();
+  for($i = 1; $i <= $n; $i++) {
+    if($n%$i == 0)
+     $cart[] = $i; 
+  }
+  return $cart;
+}
+?>
+</body>
+</html>
