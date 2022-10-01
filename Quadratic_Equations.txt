@@ -2,10 +2,10 @@
 <html>
 <body>
 <?php
-$x=1;
-$y=-1;
-$z=-1;
-$Q=QE($x,$y,$z);
+$Alpha=1;
+$Beta=-1;
+$Gamma=-1;
+$Q=QE($Alpha,$Beta,$Gamma);
 for($i=0; $i<=count($Q)-1; $i++){
 	if($i==0){
     	echo "x_0: ".$Q[$i].",";
