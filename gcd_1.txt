@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+echo "The gcd of 48 and 64 is: ".gcd(48,64);
+function gcd($m, $n){
+		$factors=array();
+        $i = 1;
+        while($i<=$m){
+                 if(($m%$i==0) && ($n%$i==0)){
+                 array_push($factors,$i);
+            }
+            $i++;
+         }
+        $result = max($factors);
+        return $result;
+}
+?>
+</body>
+</html>
