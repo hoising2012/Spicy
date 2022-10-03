@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+</style>
+</head>
+<body>
+<?php
+echo "<table>";
+echo "<tr>";
+echo "<th>a</th>";
+echo "<th>b</th>";
+echo "<th>c</th>";
+echo "<th>n!</th>";
+echo "</tr>";
+for($a=0; $a<=99; $a++){
+	for($b=0; $b<=99; $b++){
+    	for($c=0; $c<=99; $c++){
+			$F=pow(2,$a)+pow(3,$b)+pow(5,$c);			
+			$res=Checking_factorial($F);
+            if($res!=0){
+            echo "<tr>";
+            echo "<td>$a</td>";
+            echo "<td>$b</td>";
+            echo "<td>$c</td>";
+            echo "<td>$res</td>";
+            }
+            echo "</tr>";
+		}
+	}
+}
+echo "</table>";
+function Checking_factorial($N){
+	$count=0;
+    $f=1;
+    do{
+    	$count++;
+        $i=$count;
+    	$f = $f * $i; 
+    }
+	while($f<$N);
+	if($f==$N){
+    	return $count;
+    }else{
+    	return 0;
+    }
+}
+?>
+</body>
+</html>
