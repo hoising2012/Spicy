@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+echo "The order of 3 mod 7 : ".order_m_mod_n(3,7);
+echo "<br \>";
+echo "The order of 7 mod 13 : ".order_m_mod_n(7,13);
+echo "<br \>";
+echo "The order of 3 mod 19 : ".order_m_mod_n(3,19);
+echo "<br \>";
+echo "The order of 7 mod 37 : ".order_m_mod_n(7,37);
+function order_m_mod_n($m, $n){
+	$count = 0;
+	do{
+		$count++;
+		$i=$count;
+    	$F=pow($m,$i);
+		$res=$F%$n;
+	}while($res!=1);
+	return $count;
+}
+?>
+</body>
+</html>
