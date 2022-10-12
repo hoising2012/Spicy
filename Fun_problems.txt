@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+</style>
+</head>
+<body>
+<?php
+echo "The multiples of eleven: ";
+echo "<br \>";
+	for($i=1; $i<=9; $i++){
+		$str.=$i;
+    	$str.=$i;
+    	echo $str." ";
+    	$str="";
+	}	
+    echo "<br \>";
+    echo "<table>";
+    echo "<tr>";
+    echo "<th>a</th>";
+    echo "<th>b</th>";
+    echo "<th>is_perfect_square</th>";
+    echo "</tr>";
+	for($i=2; $i<=5; $i++){
+		$j = 11-$i;
+		$a = pow($j,2);
+        $b = pow($i,2);
+        $F = ($a-$b)/11;
+        $ps = gmp_perfect_square($F);
+		echo "<tr>";
+        echo "<td>$j</td>";
+        echo "<td>$i</td>";
+        if($ps==1){
+        	echo "<td>O</td>";
+        }else{
+		    echo "<td>X</td>";
+        }
+        echo "</tr>";
+	}
+    echo "</table>";
+?>
+</body>
+</html>
