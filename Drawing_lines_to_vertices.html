@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="myCanvas" width="400" height="150" style="border:1px solid #d3d3d3;">
+Drawing lines to vertices</canvas>
+<br>
+<button type="button" onclick="initCanvas()">Reset</button>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+function initCanvas(){
+ctx.clearRect(0, 0, 400, 150);
+ctx.beginPath();
+ctx.rect(100, 20, 150, 100);
+ctx.stroke();
+}
+function drawlines(canvas, event) {
+    const rect = canvas.getBoundingClientRect()
+    const x = event.clientX - rect.left
+    const y = event.clientY - rect.top	
+    if(x>100 && x<250 && y>20 && y<120){
+    ctx.moveTo(x, y);
+    ctx.lineTo(100, 20);
+    ctx.stroke();
+    ctx.moveTo(x, y);
+    ctx.lineTo(100, 120);
+    ctx.stroke();
+    ctx.moveTo(x, y);
+    ctx.lineTo(250, 20);
+    ctx.stroke();
+    ctx.moveTo(x, y);
+    ctx.lineTo(250, 120);
+    ctx.stroke();
+	}
+}
+c.addEventListener('click', function(e) {
+     drawlines(c,e);	
+})
+window.addEventListener('load', function(event) {
+initCanvas();
+});
+</script> 
+</body>
+</html>
