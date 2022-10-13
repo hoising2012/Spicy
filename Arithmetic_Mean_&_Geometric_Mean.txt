@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$X=array(0.6,0.7,0.8,0.9,1);
+$Y=array(1.05,1.1,1.2,0.5,1.2);
+echo "The Arithmetic Mean of the data: ";
+$Average="";
+for($i=0; $i<=4; $i++){
+	$Average+=$X[$i];
+}
+$count = count($X);
+$Average=$Average/$count;
+echo $Average;
+echo "<br \>";
+echo "The Geometric Mean of the data: ";
+$G_Average=1;
+for($i=0; $i<=4; $i++){
+	$G_Average=$G_Average*$Y[$i];
+}
+$n=count($Y);
+$G_Average=pow($G_Average,1/$n);
+echo round($G_Average,5);
+?>
+</body>
+</html>
