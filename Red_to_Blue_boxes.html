@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  pointer-events: none;
+}
+.box {
+padding: 40px;
+display: inline-block;
+margin: 20px;
+background: red;
+transition: background .2s;
+pointer-events: all;
+}
+.blue{
+	background-color : blue; 
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="box" id="A">A</div>
+  <div class="box" id="B">B</div>
+  <div class="box" id="C">C</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#A").hover(function(){
+     $(this).addClass('blue');
+    }, function(){
+    $(this).removeClass('blue');//original colour
+});
+$("#B").hover(function(){
+  $(this).addClass('blue');
+    }, function(){
+    $(this).removeClass('blue');//original colour
+});
+$("#C").hover(function(){
+     $(this).addClass('blue');
+    }, function(){
+    $(this).removeClass('blue');//original colour
+});
+});
+</script>
+</body>  
+</html>
