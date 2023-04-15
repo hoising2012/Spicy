@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$A=34;
+$n=5;
+$x_0=floor(pow($A,1/$n));
+echo "The initial guess is ".$x_0.".";
+echo "<br \>";
+$k=1;
+$match = false;
+do{
+    $x_1=$x_0-((pow($x_0,$n)-$A)/($n*pow($x_0,$n-1)));
+	echo "x_".$k."=".$x_1;
+    echo "<br \>";
+    if($x_0==$x_1){
+    	$match = true;
+    }else{
+    	$x_0=$x_1;
+    }
+    $k++;
+}while($match==false)
+?>
+</body>
+</html>
