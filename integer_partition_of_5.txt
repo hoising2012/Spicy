@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+	$a = 5;
+    $P = array();
+    $Q = "";
+    $n = 0;
+    $count = 0;
+    $flag = false;
+    while($a!=0){
+    	$P[$n] = $a;
+        if(($flag == true)&&($P[$n]!=1)){
+        	echo $P[$n]." ".switch_P($count);
+        	echo "<br \>";
+            $flag = false;
+            $Q++;
+        }
+        if(($count%2==0)&&($n%2==1)&&($a!=5)){
+        	$count++;
+            $flag = true;
+        }
+        if($Q%2==1){
+        	$count++;
+            $flag = true;
+        }
+        echo $P[$n]." ".switch_N($P[$n]);
+        echo "<br \>";
+    	$a--;
+    	$n++;
+    }
+    function switch_P($count){
+    		$str = "+2";
+            for($i=1; $i<$count; $i++){
+            	$str .= "+1";
+            }
+    		return $str;
+    }
+    function switch_N($m){
+    	$str="";
+        switch($m){
+        	case 4: $str = "+1";
+            		break;
+            case 3: $str = "+1+1";
+            		break;
+            case 2: $str = "+1+1+1";
+            		break;
+            case 1:	$str = "+1+1+1+1";
+            		break;
+            case 5: break;
+            default: break; 
+        }    
+        return $str;
+    }
+// n-4:5
+// n-3:4
+// n-2:3
+// n-1:2
+// n:1
+?>
+</body>
+</html>
